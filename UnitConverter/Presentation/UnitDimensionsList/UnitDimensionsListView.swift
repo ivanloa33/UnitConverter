@@ -7,10 +7,6 @@
 
 import SwiftUI
 
-
-
-
-
 struct UnitDimensionsListView: View {
     private let viewModel = UnitDimensionsListViewModel()
     
