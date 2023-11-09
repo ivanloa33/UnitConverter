@@ -14,7 +14,7 @@ struct UnitDimensionsListView: View {
         NavigationStack {
             List(viewModel.unitDimensions, id: \.self) { unitDimension in
                 NavigationLink {
-                    EmptyView()
+                    UnitConversionView(selectedUnitDimension: unitDimension)
                 } label: {
                     VStack {
                         HStack(alignment: .top) {

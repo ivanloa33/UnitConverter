@@ -13,7 +13,7 @@ final class UnitDimensionsListViewModel {
     }
     
     func getName(from unitDimension: UnitDimension) -> String {
-        unitDimension.rawValue.capitalized
+        unitDimension.title
     }
     
     func getIcon(from unitDimension: UnitDimension) -> String {

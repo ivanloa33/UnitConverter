@@ -13,6 +13,7 @@
 		E763598C2AFC3D4D00EE3E17 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E763598B2AFC3D4D00EE3E17 /* Preview Assets.xcassets */; };
 		E76359952AFD3C9000EE3E17 /* UnitDimensionsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76359942AFD3C9000EE3E17 /* UnitDimensionsListViewModel.swift */; };
 		E76359982AFD3CF400EE3E17 /* UnitDimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76359972AFD3CF400EE3E17 /* UnitDimension.swift */; };
+		E763599C2AFD43C700EE3E17 /* UnitConversionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E763599B2AFD43C700EE3E17 /* UnitConversionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E763598B2AFC3D4D00EE3E17 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E76359942AFD3C9000EE3E17 /* UnitDimensionsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitDimensionsListViewModel.swift; sourceTree = "<group>"; };
 		E76359972AFD3CF400EE3E17 /* UnitDimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitDimension.swift; sourceTree = "<group>"; };
+		E763599B2AFD43C700EE3E17 /* UnitConversionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitConversionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		E76359932AFD3C3D00EE3E17 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				E763599A2AFD43A800EE3E17 /* UnitConversionView */,
 				E76359922AFD3BEC00EE3E17 /* UnitDimensionsList */,
 			);
 			path = Presentation;
@@ -105,6 +108,14 @@
 				E76359892AFC3D4D00EE3E17 /* UnitConverter.entitlements */,
 			);
 			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		E763599A2AFD43A800EE3E17 /* UnitConversionView */ = {
+			isa = PBXGroup;
+			children = (
+				E763599B2AFD43C700EE3E17 /* UnitConversionView.swift */,
+			);
+			path = UnitConversionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +192,7 @@
 				E76359862AFC3D4C00EE3E17 /* UnitDimensionsListView.swift in Sources */,
 				E76359952AFD3C9000EE3E17 /* UnitDimensionsListViewModel.swift in Sources */,
 				E76359842AFC3D4C00EE3E17 /* UnitConverterApp.swift in Sources */,
+				E763599C2AFD43C700EE3E17 /* UnitConversionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

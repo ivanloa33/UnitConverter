@@ -7,11 +7,24 @@
 
 import Foundation
 
-enum UnitDimension: String, CaseIterable {
+enum UnitDimension: CaseIterable {
     case temperature
     case length
     case time
     case volume
+    
+    var title: String {
+        switch self {
+        case .temperature:
+            return "Temperature"
+        case .length:
+            return "Length"
+        case .time:
+            return "Time"
+        case .volume:
+            return "Volume"
+        }
+    }
     
     var icon: String {
         switch self {
