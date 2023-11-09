@@ -8,18 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		E76359842AFC3D4C00EE3E17 /* UnitConverterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76359832AFC3D4C00EE3E17 /* UnitConverterApp.swift */; };
-		E76359862AFC3D4C00EE3E17 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76359852AFC3D4C00EE3E17 /* ContentView.swift */; };
+		E76359862AFC3D4C00EE3E17 /* UnitDimensionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76359852AFC3D4C00EE3E17 /* UnitDimensionsListView.swift */; };
 		E76359882AFC3D4D00EE3E17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E76359872AFC3D4D00EE3E17 /* Assets.xcassets */; };
 		E763598C2AFC3D4D00EE3E17 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E763598B2AFC3D4D00EE3E17 /* Preview Assets.xcassets */; };
+		E76359952AFD3C9000EE3E17 /* UnitDimensionsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76359942AFD3C9000EE3E17 /* UnitDimensionsListViewModel.swift */; };
+		E76359982AFD3CF400EE3E17 /* UnitDimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76359972AFD3CF400EE3E17 /* UnitDimension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E76359802AFC3D4C00EE3E17 /* UnitConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E76359832AFC3D4C00EE3E17 /* UnitConverterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitConverterApp.swift; sourceTree = "<group>"; };
-		E76359852AFC3D4C00EE3E17 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E76359852AFC3D4C00EE3E17 /* UnitDimensionsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitDimensionsListView.swift; sourceTree = "<group>"; };
 		E76359872AFC3D4D00EE3E17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E76359892AFC3D4D00EE3E17 /* UnitConverter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UnitConverter.entitlements; sourceTree = "<group>"; };
 		E763598B2AFC3D4D00EE3E17 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E76359942AFD3C9000EE3E17 /* UnitDimensionsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitDimensionsListViewModel.swift; sourceTree = "<group>"; };
+		E76359972AFD3CF400EE3E17 /* UnitDimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitDimension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				E76359832AFC3D4C00EE3E17 /* UnitConverterApp.swift */,
-				E76359852AFC3D4C00EE3E17 /* ContentView.swift */,
-				E76359872AFC3D4D00EE3E17 /* Assets.xcassets */,
-				E76359892AFC3D4D00EE3E17 /* UnitConverter.entitlements */,
+				E76359962AFD3CD300EE3E17 /* Utilities */,
+				E76359932AFD3C3D00EE3E17 /* Presentation */,
+				E76359992AFD3D4A00EE3E17 /* SupportFiles */,
 				E763598A2AFC3D4D00EE3E17 /* Preview Content */,
 			);
 			path = UnitConverter;
@@ -67,6 +71,40 @@
 				E763598B2AFC3D4D00EE3E17 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E76359922AFD3BEC00EE3E17 /* UnitDimensionsList */ = {
+			isa = PBXGroup;
+			children = (
+				E76359852AFC3D4C00EE3E17 /* UnitDimensionsListView.swift */,
+				E76359942AFD3C9000EE3E17 /* UnitDimensionsListViewModel.swift */,
+			);
+			path = UnitDimensionsList;
+			sourceTree = "<group>";
+		};
+		E76359932AFD3C3D00EE3E17 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				E76359922AFD3BEC00EE3E17 /* UnitDimensionsList */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		E76359962AFD3CD300EE3E17 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E76359972AFD3CF400EE3E17 /* UnitDimension.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		E76359992AFD3D4A00EE3E17 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				E76359872AFC3D4D00EE3E17 /* Assets.xcassets */,
+				E76359892AFC3D4D00EE3E17 /* UnitConverter.entitlements */,
+			);
+			path = SupportFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +177,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E76359862AFC3D4C00EE3E17 /* ContentView.swift in Sources */,
+				E76359982AFD3CF400EE3E17 /* UnitDimension.swift in Sources */,
+				E76359862AFC3D4C00EE3E17 /* UnitDimensionsListView.swift in Sources */,
+				E76359952AFD3C9000EE3E17 /* UnitDimensionsListViewModel.swift in Sources */,
 				E76359842AFC3D4C00EE3E17 /* UnitConverterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,7 +306,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = UnitConverter/UnitConverter.entitlements;
+				CODE_SIGN_ENTITLEMENTS = UnitConverter/SupportFiles/UnitConverter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UnitConverter/Preview Content\"";
@@ -304,7 +344,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = UnitConverter/UnitConverter.entitlements;
+				CODE_SIGN_ENTITLEMENTS = UnitConverter/SupportFiles/UnitConverter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UnitConverter/Preview Content\"";
