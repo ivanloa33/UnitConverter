@@ -13,6 +13,7 @@ struct UnitConversionView: View {
     @State private var convertFrom: Unit
     @State private var valueFrom = 0.0
     @State private var convertTo: Unit
+    @FocusState private var valueFromIsFocused: Bool
     
     private var valueTo: String {
         let formatter = MeasurementFormatter()
@@ -30,31 +31,39 @@ struct UnitConversionView: View {
     }
     
     var body: some View {
-            Form {
-                Section("From:") {
-                    TextField(String(), value: $valueFrom, format: .number)
-                        .keyboardType(.numberPad)
-                    Picker("From", selection: $convertFrom) {
-                        ForEach(selectedUnitDimension.units, id: \.self) {
-                            Text($0.symbol)
-                        }
+        Form {
+            Section("From:") {
+                TextField(String(), value: $valueFrom, format: .number)
+                    .keyboardType(.numberPad)
+                    .focused($valueFromIsFocused)
+                Picker("From", selection: $convertFrom) {
+                    ForEach(selectedUnitDimension.units, id: \.self) {
+                        Text($0.symbol)
                     }
-                    .pickerStyle(.segmented)
                 }
-                Section("To:") {
-                    Picker("To", selection: $convertTo) {
-                        ForEach(selectedUnitDimension.units, id: \.self) {
-                            Text($0.symbol)
-                        }
+                .pickerStyle(.segmented)
+            }
+            Section("To:") {
+                Picker("To", selection: $convertTo) {
+                    ForEach(selectedUnitDimension.units, id: \.self) {
+                        Text($0.symbol)
                     }
-                    .pickerStyle(.segmented)
                 }
-                Section("Result from \(convertFrom.symbol) to \(convertTo.symbol):") {
-                    Text(valueTo)
+                .pickerStyle(.segmented)
+            }
+            Section("Result from \(convertFrom.symbol) to \(convertTo.symbol):") {
+                Text(valueTo)
+            }
+        }
+        .navigationTitle("Convert \(selectedUnitDimension.title) Units")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            if valueFromIsFocused {
+                Button("Done") {
+                    valueFromIsFocused = false
                 }
             }
-            .navigationTitle("Convert \(selectedUnitDimension.title) Units")
-            .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 
