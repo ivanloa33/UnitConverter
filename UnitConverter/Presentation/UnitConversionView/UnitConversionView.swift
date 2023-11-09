@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UnitConversionView: View {
     
-    var selectedUnitDimension: UnitDimension
+    private var selectedUnitDimension: UnitDimension
     @State private var convertFrom: Unit
     @State private var valueFrom = 0.0
     @State private var convertTo: Unit
